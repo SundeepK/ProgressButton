@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="progressButtonStyle" format="reference" />
+
+    <declare-styleable name="ProgressButton">
+        <attr name="android:clickable" />
+        <attr name="android:focusable" />
+        <attr name="defaultBackgroundColor" format="color" />
+        <attr name="defaultFontSize" format="integer" />
+        <attr name="defaultFontColor" format="color" />
+    </declare-styleable>
+
+</resources>
