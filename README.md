@@ -1,4 +1,4 @@
 ProgressButton
 ==============
 
-Simple Android widget that display a loading animation when a user clicks the button
+Simple Android widget that display's a loading animation when a user clicks the button
