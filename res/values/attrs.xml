@@ -9,6 +9,7 @@
         <attr name="defaultBackgroundColor" format="color" />
         <attr name="defaultFontSize" format="integer" />
         <attr name="defaultFontColor" format="color" />
+        <attr name="defaultText" format="string" />
     </declare-styleable>
 
 </resources>

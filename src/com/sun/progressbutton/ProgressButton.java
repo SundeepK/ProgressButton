@@ -21,6 +21,7 @@ public class ProgressButton extends ImageButton {
 	private Drawable _loadingAnimation;
 	private TextPaint _textPaint;
 	private Rect _textBounds;
+	private String _defaultText;
 
 	/**
 	 * {@link ProgressButton} can be used to display a simple rotating {@link Drawable} to give the user 
@@ -44,7 +45,7 @@ public class ProgressButton extends ImageButton {
 	    
 		_loadingAnimation = getDrawable();
 		_loadingAnimation.setAlpha(0);
-		
+		_defaultText = a.getString(R.styleable.ProgressButton_defaultText);
 	    _textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
 	    _textPaint.density = getResources().getDisplayMetrics().density;
 	    
@@ -100,8 +101,8 @@ public class ProgressButton extends ImageButton {
 		if (_shouldDisplayLoadingAnimation) {
 				shouldShowAnimation(true);
 		} else {
-			_textPaint.getTextBounds("Load more ", 0, "Load more ".length(), _textBounds);
-			canvas_.drawText( "Load more " , getWidth()/2, (getHeight()/2)+((_textBounds.bottom-_textBounds.top)/2) , _textPaint);
+			_textPaint.getTextBounds(_defaultText, 0, _defaultText.length(), _textBounds);
+			canvas_.drawText( _defaultText , getWidth()/2, (getHeight()/2)+((_textBounds.bottom-_textBounds.top)/2) , _textPaint);
 			shouldShowAnimation(false);
 			_loadingAnimation.setVisible(false, false);
 		}

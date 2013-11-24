@@ -35,6 +35,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int defaultFontSize=0x7f010002;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int defaultText=0x7f010004;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -80,11 +88,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
 
 
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
 
 
         
@@ -122,16 +132,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #ProgressButton_defaultBackgroundColor com.example.progressbutton:defaultBackgroundColor}</code></td><td></td></tr>
            <tr><td><code>{@link #ProgressButton_defaultFontColor com.example.progressbutton:defaultFontColor}</code></td><td></td></tr>
            <tr><td><code>{@link #ProgressButton_defaultFontSize com.example.progressbutton:defaultFontSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressButton_defaultText com.example.progressbutton:defaultText}</code></td><td></td></tr>
            </table>
            @see #ProgressButton_android_clickable
            @see #ProgressButton_android_focusable
            @see #ProgressButton_defaultBackgroundColor
            @see #ProgressButton_defaultFontColor
            @see #ProgressButton_defaultFontSize
+           @see #ProgressButton_defaultText
          */
         public static final int[] ProgressButton = {
             0x010100da, 0x010100e5, 0x7f010001, 0x7f010002,
-            0x7f010003
+            0x7f010003, 0x7f010004
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#clickable}
@@ -189,5 +201,19 @@ containing a value of this type.
           @attr name com.example.progressbutton:defaultFontSize
         */
         public static final int ProgressButton_defaultFontSize = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.example.progressbutton.R.attr#defaultText}
+          attribute's value can be found in the {@link #ProgressButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.progressbutton:defaultText
+        */
+        public static final int ProgressButton_defaultText = 5;
     };
 }
